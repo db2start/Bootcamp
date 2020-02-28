@@ -6,5 +6,4 @@
 > 2、该脚本经过测试；
 >
 ------
-
-![wx](.\Images\wx.png)
+![wx](https://github.com/db2start/Bootcamp/blob/master/Images/wx.png "扫一扫添加微信")
