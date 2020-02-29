@@ -21,10 +21,10 @@ sh /tmp/bond.sh 10.178.135.1	10.179.129.1	10.179.129.254	10.179.138.1
 2).批量绑定多台服务器，借助ansible，hosts详见文件
 
 ```
-ansible bond -m copy -a "src=/tmp/bond1.sh dest=/tmp/ mode=777" -i hosts  #上传执行文件到每一台服务器
+ansible bond -m copy -a "src=/tmp/bond.sh dest=/tmp/ mode=777" -i hosts  #上传执行文件到每一台服务器
 
-ansible bond -m shell -a "sh /tmp/bond1.sh {{ ip0 }} {{ ip1 }} {{ gw1 }} {{ ip2 }}" -i hosts #执行批量绑定
+ansible bond -m shell -a "sh /tmp/bond.sh {{ ip0 }} {{ ip1 }} {{ gw1 }} {{ ip2 }}" -i hosts #执行批量绑定
 
-ansible bond -m file -a "path=/tmp/bond1.sh state=absent" -i hosts  #删除执行文件
+ansible bond -m file -a "path=/tmp/bond.sh state=absent" -i hosts  #删除执行文件
 ```
 
